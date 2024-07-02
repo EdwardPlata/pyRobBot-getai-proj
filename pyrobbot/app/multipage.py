@@ -589,7 +589,7 @@ class MultipageChatbotApp(AbstractMultipageApp):
             # Present the user with the model and instructions fields first
             field_names = ["model", "ai_instructions", "context_model"]
             field_names += list(VoiceChatConfigs.model_fields)
-            field_names = list(dict.fromkeys(field_names))
+            field_names = set(dict.fromkeys(field_names))
             model_fields = {k: VoiceChatConfigs.model_fields[k] for k in field_names}
 
             updates_to_chat_configs = self._handle_chat_configs_value_selection(
