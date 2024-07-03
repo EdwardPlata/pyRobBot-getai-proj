@@ -96,7 +96,7 @@ class Chat(AlternativeConstructors):
         code_marker = self._code_marker
         local_datetime = datetime.now(get_localzone()).isoformat(timespec="seconds")
         msg_content = (
-            f"Your name is {self.assistant_name}. Your model is {self.model}\n"
+            f"Your name is Eddgie. Your model is {self.model}\n"
             f"You are a helpful assistant to {self.username}\n"
             f"You have internet access\n"
             f"You MUST ALWAYS write {code_marker} before AND after code blocks. Example: "
